@@ -1,0 +1,141 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="dist/css/bootstrap.css">
+		<script src="dist/js/jquery.min.js"></script>
+		<script src="dist/js/bootstrap.js"></script>
+		<style>
+			i{
+				color: red;
+				font-weight: bold;
+			}
+			h3{
+				margin:0px;
+			}
+		</style>	
+		<script>
+		/*	function validation()
+			{
+				var emailId,passWord;
+				var status = true;
+				emailId = document.getElementById("email").value;
+				passWord = document.getElementById("pass").value;
+				if(emailId == "")
+				{
+					status = false;
+					document.getElementById("email").style.borderColor = "red";
+					document.getElementById("emailError").innerHTML = "Please Enter Email Id";
+				}
+				else{
+					document.getElementById("email").style.borderColor = "green";
+					document.getElementById("emailError").innerHTML = "";
+				}
+				if(passWord == "")
+				{
+					status = false;
+					document.getElementById("pass").style.borderColor = "red";
+					document.getElementById("passError").innerHTML = "Please Enter Password";
+				}
+				else{
+					document.getElementById("pass").style.borderColor = "green";
+					document.getElementById("passError").innerHTML = "";
+				}
+			}*/
+			$(function(){
+				$("#btn1").click(function(){
+					var emailId,passWord;
+					var status = true;
+					emailId = $("#email").val().trim();
+					passWord = $("#pass").val().trim();
+				if(emailId == "")
+				{
+					status = false;
+					$("#email").css("border","2px solid red");
+					$("#emailError").text("Please Enter Email Id");
+				}
+				else{
+					$("#email").css("border","2px solid green");
+					$("#emailError").text("");
+				}
+				if(passWord == "")
+				{
+					status = false;
+					$("#pass").css("border","2px solid red");
+					$("#passError").text("Please Enter Password");
+				}
+				else{
+					$("#pass").css("border","2px solid green");
+					$("#passError").text("");
+				}
+				
+				//return status
+				if(status == true)
+				{
+					$("#f1").submit();
+				}
+				
+				})
+			
+			});
+		
+		</script>
+	</head>
+	<body>
+		<div class="container">
+		<div class="row">
+			<div class="col-sm-12" class="rowgap">
+				<nav class="navbar navbar-default">
+					<ul class="nav navbar-nav">
+						<li ><a href="home.html"> Home </a></li>
+						<li><a href="blog.html"> Blog </a></li>
+						<li><a href="services.html"> Get Details </a></li>
+						<li><a href="about.html"> About Us </a></li>
+						<li><a href="contact.html"> Contact Us </a></li>
+					
+					</ul> <!-- ul end -->
+					<ul class="nav navbar-nav navbar-right">
+						<li ><a href="register.html"> Register </a></li>
+						<li class="active"><a href="login.html"> Login </a></li>
+						<li id="login"><a href="dashboard.html"> Dash Board </a></li>
+					</ul> <!-- ul1 end -->
+				</nav> <!-- nav end -->
+			</div> <!-- col 12 end -->
+		</div> <!-- row end -->
+		</div> <!-- container end -->
+		<br/>
+		<div class="container">
+		<div class="row ">
+			<div class="col-sm-3"></div>
+			<form action="#" method="POST" id="f1">
+			<div class="col-sm-6 well">
+			<h3 class="row form-group text-center">Login Here </h3>
+				
+				<div class="row form-group">
+					<div class="col-sm-4"><label>Email</label></div>
+					<div class="col-sm-7"><input type="email" id="email" class="form-control">
+					<i id="emailError"></i></div>
+				</div> <!-- row form group end -->
+				
+				<div class="row form-group">
+					<div class="col-sm-4"><label>Password</label></div>
+					<div class="col-sm-7"><input type="password" id="pass" class="form-control">
+					<i id="passError"></i></div>
+				</div> <!-- row form group end -->
+				
+			
+				<br/>
+				<div class="row form-group text-center">
+					<button type="button" class="btn btn-primary" id="btn1">Login</button>
+
+				</div> <!-- row form group end -->
+				
+			</div>
+			</form>
+			<div class="col-sm-3"></div>
+    
+     
+		</div> <!-- row end -->
+		</div> <!-- container end -->
+		
+	</body>
+</html>

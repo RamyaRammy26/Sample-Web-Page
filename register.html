@@ -1,0 +1,120 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="dist/css/bootstrap.css">
+		<script src="dist/js/jquery.min.js"></script>
+		<script src="dist/js/bootstrap.js"></script>
+		<script src="regis.js"></script>
+		<style>
+			i{
+				color: red;
+				font-weight: bold;
+			}
+			h3{
+				margin:0px;
+			}
+		</style>	
+		
+	</head>
+	<body>
+		<div class="container">
+		<div class="row">
+			<div class="col-sm-12" class="rowgap">
+				<nav class="navbar navbar-default">
+					<ul class="nav navbar-nav">
+						<li ><a href="home.html"> Home </a></li>
+						<li><a href="blog.html"> Blog </a></li>
+						<li><a href="services.html"> Get Details </a></li>
+						<li><a href="about.html"> About Us </a></li>
+						<li><a href="contact.html"> Contact Us </a></li>
+					
+					</ul> <!-- ul end -->
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="register.html"> Register </a></li>
+						<li ><a href="login.html"> Login </a></li>
+						<li id="login"><a href="dashboard.html"> Dash Board </a></li>
+					</ul> <!-- ul1 end -->
+				</nav> <!-- nav end -->
+			</div> <!-- col 12 end -->
+		</div> <!-- row end -->
+		</div> <!-- container end -->
+		<br/>
+		<div class="container">
+		<div class="row ">
+			<div class="col-sm-3"></div>
+			<form action="#" method="POST" id="f1">
+			<div class="col-sm-6 well">
+			<h3 class="row form-group text-center">Registration Form </h3>
+				<div class="row form-group">
+					<div class="col-sm-4"><label>Full Name</label></div>
+					<div class="col-sm-7"><input type="text" id="name" class="form-control">
+					<i id="nameError"></i></div>
+				</div> <!-- row form group end -->
+				
+				<div class="row form-group">
+					<div class="col-sm-4"><label>Email</label></div>
+					<div class="col-sm-7"><input type="email" id="email" class="form-control">
+					<i id="emailError"></i></div>
+				</div> <!-- row form group end -->
+				
+				<div class="row form-group">
+					<div class="col-sm-4"><label>Password</label></div>
+					<div class="col-sm-7"><input type="password" id="pass" class="form-control">
+					<i id="passError"></i></div>
+				</div> <!-- row form group end -->
+				
+				<div class="row form-group">
+					<div class="col-sm-4"><label>Re-enter Password</label></div>
+					<div class="col-sm-7"><input type="password" id="confirmPass" class="form-control">
+					<i id="confirmPassError"></i></div>
+				</div> <!-- row form group end -->
+				
+				<div class="row form-group">
+					<div class="col-sm-4"><label>Mobile No</label></div>
+					<div class="col-sm-7"><input type="text" id="mobile" class="form-control">
+					<i id="mobileError"></i></div>
+				</div> <!-- row form group end -->
+				
+				<div class="row form-group">
+					<div class="col-sm-4"><label>City</label></div>
+					<div class="col-sm-7">
+						<select class="form-control" id="city">
+							<option value=""> -- Select City --</option>
+							<option value="bangalore">Bangalore</option>
+							<option value="guntur">Guntur</option>
+							<option value="vizag">Vizag</option>
+						</select>
+						<i id="cityError"></i>
+					</div>
+				</div> <!-- row form group end -->
+				
+				<div class="row form-group">
+					<div class="col-sm-4"><label>Gender</label></div>
+					<div class="col-sm-7"><input type="radio" id="male" value="m" name="gender"> Male
+										  <input type="radio" id="female" value="f" name="gender"> Female
+					<i id="genderError"></i>
+					</div>
+				</div> <!-- row form group end -->
+				
+				<div class="row form-group">
+					<div class="col-sm-4"><label>Hobbies</label></div>
+					<div class="col-sm-7"><input type="checkbox" id="hobby1" value="reading" name="hobby"> Reading 
+										  <input type="checkbox" id="hobby2" value="writing" name="hobby"> Writing 
+										  <input type="checkbox" id="hobby3" value="cooking" name="hobby"> Cooking 
+					<i id="hobbyError"></i>
+					</div>
+				</div> <!-- row form group end -->
+				<br/>
+				<div class="row form-group text-center">
+					<button type="button" class="btn btn-primary" onclick="validation()">Register</button>
+					<button type="reset" class="btn btn-danger" onclick="resetBtn()">Clear</button>
+				</div> <!-- row form group end -->
+				
+			</div>
+			</form>
+			<div class="col-sm-3"></div>
+		</div> <!-- row end -->
+		</div> <!-- container end -->
+		
+	</body>
+</html>
